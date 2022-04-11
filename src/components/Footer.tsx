@@ -1,6 +1,8 @@
+import Image from 'next/image';
 import Link from 'next/link';
-import { FaTwitter } from 'react-icons/fa';
+import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
 import { headerNavLinks } from '@data/headerNavLinks';
+import { siteMetaData } from '@data/siteMetaData';
 
 const Footer = () => {
   return (
@@ -11,9 +13,14 @@ const Footer = () => {
             <Link href='/' area-label='むっく||ホームへ'>
               <a>
                 <div className='flex justify-between items-center'>
-                  <h5 className='text-2xl font-black tracking-wider hover:text-gray-300'>
-                    MUKK BLOG
-                  </h5>
+                  <Image
+                    src='/images/logo300x300.png'
+                    width={70}
+                    height={70}
+                    alt='mukklogo'
+                    className='rounded-full'
+                  />
+                  <div className='text-3xl font-black tracking-wide'>MUKK BLOG</div>
                 </div>
               </a>
             </Link>
@@ -29,22 +36,24 @@ const Footer = () => {
           </div>
           <div className='mt-5'>
             <a
-              href='#'
+              href={siteMetaData.twitter}
+              target='_blank'
+              rel='noopener noreferrer'
               className='inline-block pb-1 mx-4 text-xl text-white hover:text-gray-300 border-b-2 border-transparent hover:border-gray-300 transition duration-300'
             >
               <FaTwitter />
             </a>
             <a
-              href='#'
+              href={siteMetaData.facebook}
               className='inline-block pb-1 mx-4 text-xl text-white hover:text-gray-300 border-b-2 border-transparent hover:border-gray-300 transition duration-300'
             >
-              <FaTwitter />
+              <FaFacebook />
             </a>
             <a
-              href='#'
+              href={siteMetaData.instagram}
               className='inline-block pb-1 mx-4 text-xl text-white hover:text-gray-300 border-b-2 border-transparent hover:border-gray-300 transition duration-300'
             >
-              <FaTwitter />
+              <FaInstagram />
             </a>
           </div>
           <p className='mt-10 text-sm font-medium tracking-wide text-center text-gray-300'>

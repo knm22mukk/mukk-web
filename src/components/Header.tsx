@@ -7,10 +7,10 @@ const Header = () => {
   return (
     <header className='flex justify-around items-center py-4 mx-auto max-w-screen-xl'>
       <Link href='/' area-label='むっく||ホームへ'>
-        <a>
+        <a className='hover:text-indigo-600'>
           <div className='flex justify-between items-center'>
             <Image
-              src='/images/logo.png'
+              src='/images/logo300x300.png'
               width={70}
               height={70}
               alt='mukklogo'
@@ -24,7 +24,7 @@ const Header = () => {
         <div className='hidden md:block'>
           {headerNavLinks.map((link) => (
             <Link key={link.title} href={link.href}>
-              <a className='p-3 font-bold hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-600 duration-300'>
+              <a className='p-3 font-bold text-gray-800 hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-600 duration-300'>
                 {link.title}
               </a>
             </Link>
