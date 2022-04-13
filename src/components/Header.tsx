@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { VFC } from 'react';
 import MobileNav from '@components/MobileNav';
 import { headerNavLinks } from '@data/headerNavLinks';
 
-const Header = () => {
+const Header: VFC = () => {
   return (
     <header className='flex justify-around items-center py-4 mx-auto max-w-screen-xl'>
       <Link href='/' area-label='むっく||ホームへ'>

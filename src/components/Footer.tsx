@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { VFC } from 'react';
 import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
 import { headerNavLinks } from '@data/headerNavLinks';
 import { siteMetaData } from '@data/siteMetaData';
 
-const Footer = () => {
+const Footer: VFC = () => {
   return (
     <div className='-mx-8 -mb-8 text-white bg-indigo-600'>
       <div className='py-20 mx-auto max-w-screen-xl lg:py-24'>
