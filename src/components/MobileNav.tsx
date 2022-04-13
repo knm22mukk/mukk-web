@@ -11,7 +11,7 @@ const MobileNav: VFC = () => {
   };
 
   return (
-    <div className='md:hidden'>
+    <div className='px-3 md:hidden'>
       <button
         area-label='ToggleMenu'
         type='button'
@@ -21,7 +21,7 @@ const MobileNav: VFC = () => {
         {open ? <MdClose /> : <MdMenu />}
       </button>
       <div
-        className={`fixed w-full h-full top-24 right-0 bg-gray-100 mx-auto opacity-95 z-10 transform ease-in-out duration-300 ${
+        className={`fixed w-full h-full top-24 right-0 bg-gray-100 dark:bg-gray-600 mx-auto opacity-95 z-10 transform ease-in-out duration-300 ${
           open ? 'translate-x-0' : 'translate-x-full'
         }`}
       >

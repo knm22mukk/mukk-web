@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { VFC } from 'react';
+import ChangeThemeButton from '@components/ChangeThemeButton';
 import MobileNav from '@components/MobileNav';
 import { headerNavLinks } from '@data/headerNavLinks';
 
@@ -25,13 +26,14 @@ const Header: VFC = () => {
         <div className='hidden md:block'>
           {headerNavLinks.map((link) => (
             <Link key={link.title} href={link.href}>
-              <a className='p-3 font-bold text-gray-800 hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-600 duration-300'>
+              <a className='p-3 font-bold  hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-600 duration-300'>
                 {link.title}
               </a>
             </Link>
           ))}
         </div>
         <MobileNav />
+        <ChangeThemeButton />
       </div>
     </header>
   );
