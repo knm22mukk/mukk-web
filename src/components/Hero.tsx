@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { VFC } from 'react';
 
-const Hero = () => {
+const Hero: VFC = () => {
   return (
     <div className='container'>
       <div className='flex flex-col py-20 mx-auto max-w-screen-xl md:py-24 lg:flex-row lg:items-center'>

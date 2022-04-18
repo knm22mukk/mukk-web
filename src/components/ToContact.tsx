@@ -1,6 +1,7 @@
 import Link from 'next/link';
+import { VFC } from 'react';
 
-const ToContact = () => {
+const ToContact: VFC = () => {
   return (
     <div className='container py-20 my-10'>
       <div className='relative py-20 bg-indigo-600 rounded-lg lg:py-24'>
