@@ -18,7 +18,7 @@ const Header: VFC = () => {
               alt='mukklogo'
               className='rounded-full'
             />
-            <div className='text-3xl font-black tracking-wide'>MUKK BLOG</div>
+            <div className='text-3xl font-black tracking-wide'>MUKK PACK</div>
           </div>
         </a>
       </Link>
