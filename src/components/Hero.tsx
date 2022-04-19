@@ -10,7 +10,7 @@ const Hero: VFC = () => {
           <h1 className='max-w-3xl text-3xl font-black leading-snug md:text-5xl'>
             Modern React Templates, Just For You
           </h1>
-          <p className='my-5 mx-auto max-w-lg text-sm font-medium text-gray-600 lg:my-8 lg:mx-0 lg:text-base'>
+          <p className='my-5 mx-auto max-w-lg text-sm font-medium text-gray-600 dark:text-white lg:my-8 lg:mx-0 lg:text-base'>
             Our templates are easy to setup, understand and customize. Fully modular components with
             a variety of pages and components.
           </p>

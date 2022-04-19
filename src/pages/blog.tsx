@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 
 const blog: NextPage = () => {
-  return <div>blog一覧ページ</div>;
+  return <div>BLOG</div>;
 };
 
 export default blog;
