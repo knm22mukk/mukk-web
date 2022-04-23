@@ -7,7 +7,7 @@ type Props = {
 const SectionHeader = ({ subheading, title, description }: Props) => {
   return (
     <div className='flex flex-col flex-wrap items-center mx-auto md:flex-row md:justify-center md:items-stretch'>
-      <h5 className='mb-6 font-bold text-indigo-600'>{subheading}</h5>
+      <h5 className='mb-6 font-bold text-indigo-600 dark:text-white'>{subheading}</h5>
       <h2 className='w-full text-3xl font-black tracking-wide text-center md:text-3xl lg:text-4xl'>
         {title}
       </h2>

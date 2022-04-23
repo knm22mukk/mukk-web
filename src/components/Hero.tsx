@@ -5,7 +5,7 @@ import { VFC } from 'react';
 const Hero: VFC = () => {
   return (
     <div className='container relative'>
-      <div className='flex flex-col py-20 mx-auto max-w-screen-xl md:items-center md:py-24 lg:flex-row'>
+      <div className='flex flex-col mx-auto max-w-screen-xl md:items-center lg:flex-row'>
         <div className='relative shrink-0 text-center lg:pr-12 lg:w-6/12 lg:text-left'>
           <h1 className='max-w-3xl text-3xl font-black leading-snug md:text-5xl'>
             Modern React Templates, Just For You

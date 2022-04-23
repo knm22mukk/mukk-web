@@ -7,7 +7,7 @@ import { headerNavLinks } from '@data/headerNavLinks';
 
 const Header: VFC = () => {
   return (
-    <header className='flex justify-around items-center py-4 mx-auto max-w-screen-xl'>
+    <header className='flex justify-around items-center py-4 mx-auto'>
       <Link href='/' area-label='むっく||ホームへ'>
         <a className='hover:text-indigo-600'>
           <div className='flex justify-between items-center'>
