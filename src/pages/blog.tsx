@@ -1,10 +1,11 @@
 import { NextPage } from 'next';
 import BlogCard from '@components/BlogCard';
+import Layout from '@components/Layout';
 import SectionHeader from '@components/SectionHeader';
 
 const blog: NextPage = () => {
   return (
-    <div>
+    <Layout>
       <SectionHeader
         subheading='BLOG'
         title='What kind of products do I introduce?'
@@ -20,7 +21,7 @@ const blog: NextPage = () => {
           <BlogCard />
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 

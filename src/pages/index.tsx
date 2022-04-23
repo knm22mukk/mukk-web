@@ -2,12 +2,13 @@ import type { NextPage } from 'next';
 import BlogCard from '@components/BlogCard';
 import Features from '@components/Features';
 import Hero from '@components/Hero';
+import Layout from '@components/Layout';
 import SectionHeader from '@components/SectionHeader';
 import ToContact from '@components/ToContact';
 
 const Home: NextPage = () => {
   return (
-    <>
+    <Layout>
       <Hero />
       <Features />
       <div className='container'>
@@ -24,7 +25,7 @@ const Home: NextPage = () => {
         </div>
       </div>
       <ToContact />
-    </>
+    </Layout>
   );
 };
 

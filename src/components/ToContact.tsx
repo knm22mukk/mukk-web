@@ -6,8 +6,8 @@ import SectionHeader from './SectionHeader';
 const ToContact: VFC = () => {
   return (
     <div className='container py-10'>
-      <div className='flex flex-col justify-between mx-auto max-w-screen-xl md:flex-row'>
-        <div className='flex shrink-0 items-center my-5 mx-auto w-full max-w-md h-80 md:mx-0 md:w-5/12 md:max-w-none md:h-auto'>
+      <div className='flex flex-col justify-between mx-auto md:flex-row'>
+        <div className='flex shrink-0 items-center my-5 mx-auto w-full max-w-md md:mx-0 md:w-5/12'>
           <Image
             src='/images/contactus.png'
             width={600}
