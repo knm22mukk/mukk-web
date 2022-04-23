@@ -3,7 +3,7 @@ import SectionHeader from '@components/SectionHeader';
 
 const Features = () => {
   return (
-    <div className='container'>
+    <div className='container pt-16'>
       <div className='flex flex-col flex-wrap items-center mx-auto max-w-screen-lg md:flex-row md:justify-center md:items-stretch'>
         <SectionHeader
           subheading='BLOG'
