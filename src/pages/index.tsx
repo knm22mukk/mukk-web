@@ -3,12 +3,14 @@ import BlogCard from '@components/BlogCard';
 import Features from '@components/Features';
 import Hero from '@components/Hero';
 import Layout from '@components/Layout';
+import SEO from '@components/SEO';
 import SectionHeader from '@components/SectionHeader';
 import ToContact from '@components/ToContact';
 
 const Home: NextPage = () => {
   return (
     <Layout>
+      <SEO pageTitle='MUKK PACK || トップページ' />
       <Hero />
       <Features />
       <div className='container'>

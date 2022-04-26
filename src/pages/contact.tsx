@@ -1,10 +1,15 @@
 import { NextPage } from 'next';
 import Layout from '@components/Layout';
+import SEO from '@components/SEO';
 import SectionHeader from '@components/SectionHeader';
 
 const contact: NextPage = () => {
   return (
     <Layout>
+      <SEO
+        pageTitle='MUKK PAKK || お問い合わせ'
+        pageDescription='包装資材営業マンむっくへのお問い合わせはこちらからお願いします。お問い合わせから2、3日以内にご連絡させていただきます。'
+      />
       <SectionHeader
         subheading='CONTACT'
         title='What kind of products do I introduce?'
