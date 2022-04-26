@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import AboutMe from '@components/AboutMe';
 import Layout from '@components/Layout';
 import SectionHeader from '@components/SectionHeader';
 
@@ -10,6 +11,7 @@ const about: NextPage = () => {
         title='Who Is MUKK?'
         description='このブログサイトでどんな情報を発信するかご紹介します'
       />
+      <AboutMe />
     </Layout>
   );
 };
