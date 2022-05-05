@@ -10,7 +10,7 @@ const ChangeThemeButton: VFC = () => {
 
   return (
     <button
-      area-label='ChangeThemeButton'
+      aria-label='ChangeThemeButton'
       type='button'
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       className='flex items-center px-3 text-3xl'

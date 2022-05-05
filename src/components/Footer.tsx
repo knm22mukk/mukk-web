@@ -7,11 +7,11 @@ import { siteMetaData } from '@data/siteMetaData';
 
 const Footer: VFC = () => {
   return (
-    <div className='-mx-8 -mb-8 text-white bg-indigo-600'>
+    <div className='text-white bg-indigo-600'>
       <div className='py-20 mx-auto max-w-screen-xl lg:py-24'>
         <div className='flex flex-col justify-center items-center px-8'>
           <div className='flex justify-center items-center md:justify-start'>
-            <Link href='/' area-label='むっく||ホームへ'>
+            <Link href='/' aria-label='むっく||ホームへ'>
               <a>
                 <div className='flex justify-between items-center'>
                   <Image
@@ -57,7 +57,7 @@ const Footer: VFC = () => {
               <FaInstagram />
             </a>
           </div>
-          <p className='mt-10 text-sm font-medium tracking-wide text-center text-gray-300'>
+          <p className='mt-10 text-sm font-medium tracking-wide text-center'>
             &copy; Copyright 2022, MUKK PACK. All Rights Reserved.
           </p>
         </div>

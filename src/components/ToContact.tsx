@@ -25,9 +25,7 @@ const ToContact: VFC = () => {
             />
             <div className='flex flex-col justify-center items-center mt-8 sm:flex-row'>
               <Link href='/contact'>
-                <a>
-                  <button className='btn'>お問い合わせ</button>
-                </a>
+                <a className='btn'>お問い合わせ</a>
               </Link>
             </div>
           </div>

@@ -16,9 +16,7 @@ const Hero: VFC = () => {
           </p>
           <div className='flex flex-col justify-center items-center mt-8 sm:flex-row lg:justify-start'>
             <Link href='/blog'>
-              <a>
-                <button className='btn'>ブログ一覧へ</button>
-              </a>
+              <a className='btn'>ブログ一覧へ</a>
             </Link>
           </div>
         </div>

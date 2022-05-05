@@ -12,9 +12,9 @@ const BlogCard = () => {
               <div className='mt-4 text-xs italic font-semibold text-gray-600 dark:text-white uppercase'>
                 april 4, 2022
               </div>
-              <h5 className='mt-5 text-2xl font-black hover:text-indigo-600 transition duration-300'>
+              <h4 className='mt-5 text-2xl font-black hover:text-indigo-600 transition duration-300'>
                 〇〇から発売された新商品をご紹介します
-              </h5>
+              </h4>
             </div>
           </div>
         </div>

@@ -16,7 +16,7 @@ const Features = () => {
               <div className='flex justify-center items-center mb-4 w-16 h-16 bg-indigo-50 rounded-full sm:mx-auto sm:w-24 sm:h-24'>
                 <AiOutlineCheck className='w-12 h-12 text-indigo-600' />
               </div>
-              <h6 className='mb-3 text-2xl font-bold leading-5'>A slice of heaven</h6>
+              <h4 className='mb-3 text-2xl font-bold leading-5'>A slice of heaven</h4>
               <p className='mb-3 text-sm'>
                 Disrupt inspire and think tank, social entrepreneur but preliminary thinking think
                 tank compelling. Inspiring, invest synergy capacity building, white paper; silo,
@@ -27,7 +27,7 @@ const Features = () => {
               <div className='flex justify-center items-center mb-4 w-16 h-16 bg-indigo-50 rounded-full sm:mx-auto sm:w-24 sm:h-24'>
                 <AiOutlineCheck className='w-12 h-12 text-indigo-600' />
               </div>
-              <h6 className='mb-3 text-2xl font-bold leading-5'>A slice of heaven</h6>
+              <h4 className='mb-3 text-2xl font-bold leading-5'>A slice of heaven</h4>
               <p className='mb-3 text-sm'>
                 Disrupt inspire and think tank, social entrepreneur but preliminary thinking think
                 tank compelling. Inspiring, invest synergy capacity building, white paper; silo,
@@ -38,7 +38,7 @@ const Features = () => {
               <div className='flex justify-center items-center mb-4 w-16 h-16 bg-indigo-50 rounded-full sm:mx-auto sm:w-24 sm:h-24'>
                 <AiOutlineCheck className='w-12 h-12 text-indigo-600' />
               </div>
-              <h6 className='mb-3 text-2xl font-bold leading-5'>A slice of heaven</h6>
+              <h4 className='mb-3 text-2xl font-bold leading-5'>A slice of heaven</h4>
               <p className='mb-3 text-sm'>
                 Disrupt inspire and think tank, social entrepreneur but preliminary thinking think
                 tank compelling. Inspiring, invest synergy capacity building, white paper; silo,
@@ -49,7 +49,7 @@ const Features = () => {
               <div className='flex justify-center items-center mb-4 w-16 h-16 bg-indigo-50 rounded-full sm:mx-auto sm:w-24 sm:h-24'>
                 <AiOutlineCheck className='w-12 h-12 text-indigo-600' />
               </div>
-              <h6 className='mb-3 text-2xl font-bold leading-5'>A slice of heaven</h6>
+              <h4 className='mb-3 text-2xl font-bold leading-5'>A slice of heaven</h4>
               <p className='mb-3 text-sm'>
                 Disrupt inspire and think tank, social entrepreneur but preliminary thinking think
                 tank compelling. Inspiring, invest synergy capacity building, white paper; silo,

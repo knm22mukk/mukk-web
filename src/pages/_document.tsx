@@ -8,7 +8,7 @@ class MyDocument extends Document {
   }
   render(): JSX.Element {
     return (
-      <Html lang='ja-JP'>
+      <Html lang='ja'>
         <Head>
           <meta name='application-name' content='' />
           <meta name='apple-mobile-web-app-capable' content='yes' />

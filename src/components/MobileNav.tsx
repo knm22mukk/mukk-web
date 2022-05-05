@@ -13,7 +13,7 @@ const MobileNav: VFC = () => {
   return (
     <div className='px-3 md:hidden'>
       <button
-        area-label='ToggleMenu'
+        aria-label='ToggleMenu'
         type='button'
         onClick={handleClick}
         className='flex items-center text-3xl'
