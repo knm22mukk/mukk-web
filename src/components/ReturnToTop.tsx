@@ -1,0 +1,46 @@
+import { useEffect, useState, VFC } from 'react';
+import { FaAngleDoubleUp } from 'react-icons/fa';
+
+const ReturnToTop: VFC = () => {
+  const [active, setActive] = useState<boolean>(false);
+
+  const returnTop = (): void => {
+    typeof window !== 'undefined' &&
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', scrollWindow);
+    return (): void => {
+      window.removeEventListener('scroll', scrollWindow);
+    };
+  }, []);
+
+  const scrollWindow = (): void => {
+    const top = 100;
+    let scroll = 0;
+    scroll = window.scrollY;
+    if (top <= scroll) {
+      setActive(true);
+    } else {
+      setActive(false);
+    }
+  };
+
+  return (
+    <button
+      aria-label='トップに戻る'
+      onClick={returnTop}
+      className={`fixed right-10 bottom-10 p-4 bg-gray-400 rounded-full ${
+        active ? 'block' : 'hidden'
+      }`}
+    >
+      <FaAngleDoubleUp className='w-10 h-10 text-white' />
+    </button>
+  );
+};
+
+export default ReturnToTop;
