@@ -38,6 +38,7 @@ const Footer: VFC = () => {
           <div className='mt-5'>
             <a
               href={siteMetaData.twitter}
+              aria-label='twitterへのリンク'
               target='_blank'
               rel='noopener noreferrer'
               className='inline-block pb-1 mx-4 text-xl text-white hover:text-gray-300 border-b-2 border-transparent hover:border-gray-300 transition duration-300'
@@ -46,12 +47,18 @@ const Footer: VFC = () => {
             </a>
             <a
               href={siteMetaData.facebook}
+              aria-label='facebookへのリンク'
+              target='_blank'
+              rel='noopener noreferrer'
               className='inline-block pb-1 mx-4 text-xl text-white hover:text-gray-300 border-b-2 border-transparent hover:border-gray-300 transition duration-300'
             >
               <FaFacebook />
             </a>
             <a
               href={siteMetaData.instagram}
+              aria-label='instagramへのリンク'
+              target='_blank'
+              rel='noopener noreferrer'
               className='inline-block pb-1 mx-4 text-xl text-white hover:text-gray-300 border-b-2 border-transparent hover:border-gray-300 transition duration-300'
             >
               <FaInstagram />
