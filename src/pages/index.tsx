@@ -10,7 +10,7 @@ import ToContact from '@components/ToContact';
 const Home: NextPage = () => {
   return (
     <Layout>
-      <SEO pageTitle='MUKK PACK || トップページ' />
+      <SEO pageTitle='MUKK PACK' />
       <Hero />
       <Features />
       <div className='container'>
@@ -19,8 +19,7 @@ const Home: NextPage = () => {
           title='What kind of products do I introduce?'
           description='このブログサイトでどんな情報を発信するかご紹介します'
         />
-        <div className='grid gap-x-4 py-10 mx-auto max-w-4xl md:grid-cols-2'>
-          <BlogCard />
+        <div className='grid gap-4 py-16 lg:grid-cols-3'>
           <BlogCard />
           <BlogCard />
           <BlogCard />

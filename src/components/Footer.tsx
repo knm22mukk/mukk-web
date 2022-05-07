@@ -7,7 +7,7 @@ import { siteMetaData } from '@data/siteMetaData';
 
 const Footer: VFC = () => {
   return (
-    <div className='text-white bg-indigo-600'>
+    <div className='text-white bg-indigo-600 dark:bg-gray-600'>
       <div className='py-20 mx-auto max-w-screen-xl lg:py-24'>
         <div className='flex flex-col justify-center items-center px-8'>
           <div className='flex justify-center items-center md:justify-start'>

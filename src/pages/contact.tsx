@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import Image from 'next/image';
 import Layout from '@components/Layout';
 import SEO from '@components/SEO';
 import SectionHeader from '@components/SectionHeader';
@@ -15,38 +16,51 @@ const contact: NextPage = () => {
         title='What kind of products do I introduce?'
         description='このブログサイトでどんな情報を発信するかご紹介します'
       />
-      <div className='container py-16'>
-        <form className='flex flex-col p-8 mx-auto max-w-2xl'>
-          <label htmlFor='name' className='mt-8 mb-2 font-light text-gray-500 dark:text-white'>
-            お名前<span className='text-red-500'>*</span>
-          </label>
-          <input
-            type='text'
-            name='name'
-            className='py-1 px-3 w-full text-base leading-8 text-gray-700 bg-gray-100 focus:bg-white rounded border border-gray-300 focus:border-indigo-500 outline-none focus:ring-2 focus:ring-indigo-200 transition-colors duration-200 ease-in-out'
-          />
-
-          <label htmlFor='email' className='mt-8 mb-2 font-light text-gray-500 dark:text-white'>
-            メールアドレス<span className='text-red-500'>*</span>
-          </label>
-          <input
-            type='text'
-            name='email'
-            className='py-1 px-3 w-full text-base leading-8 text-gray-700 bg-gray-100 focus:bg-white rounded border border-gray-300 focus:border-indigo-500 outline-none focus:ring-2 focus:ring-indigo-200 transition-colors duration-200 ease-in-out'
-          />
-
-          <label htmlFor='message' className='mt-8 mb-2 font-light text-gray-500 dark:text-white'>
-            メッセージ<span className='text-red-500'>*</span>
-          </label>
-          <textarea
-            name='message'
-            className='py-1 px-3 w-full text-base leading-8 text-gray-700 bg-gray-100 focus:bg-white rounded border border-gray-300 focus:border-indigo-500 outline-none focus:ring-2 focus:ring-indigo-200 transition-colors duration-200 ease-in-out'
-          />
-
-          <div className='pt-8 text-center'>
-            <button className='btn'>送信する</button>
+      <div className='container py-10'>
+        <div className='flex flex-col justify-between mx-auto md:flex-row'>
+          <div className='flex shrink-0 justify-center items-center mx-auto w-full max-w-md md:mx-0 md:w-1/3'>
+            <Image
+              src='/images/mailbox.png'
+              width={300}
+              height={300}
+              alt='ContactUs'
+              className='rounded-lg'
+            />
           </div>
-        </form>
+          <div className='mx-auto w-full md:order-first md:mx-0 md:mr-12 md:max-w-none lg:mr-16'>
+            <div className='text-left'>
+              <form className='flex flex-col p-8 mx-auto max-w-2xl'>
+                <label
+                  htmlFor='name'
+                  className='mt-8 mb-2 font-light text-gray-500 dark:text-white'
+                >
+                  お名前<span className='text-red-500'>*</span>
+                </label>
+                <input type='text' name='name' className='formInput' />
+
+                <label
+                  htmlFor='email'
+                  className='mt-8 mb-2 font-light text-gray-500 dark:text-white'
+                >
+                  メールアドレス<span className='text-red-500'>*</span>
+                </label>
+                <input type='text' name='email' className='formInput' />
+
+                <label
+                  htmlFor='message'
+                  className='mt-8 mb-2 font-light text-gray-500 dark:text-white'
+                >
+                  メッセージ<span className='text-red-500'>*</span>
+                </label>
+                <textarea name='message' rows={7} className='formInput' />
+
+                <div className='pt-8 text-center'>
+                  <button className='btn'>送信する</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </Layout>
   );

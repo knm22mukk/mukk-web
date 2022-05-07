@@ -4,9 +4,9 @@ import { VFC } from 'react';
 
 const Hero: VFC = () => {
   return (
-    <div className='container relative'>
-      <div className='flex flex-col mx-auto max-w-screen-xl md:items-center lg:flex-row'>
-        <div className='relative shrink-0 text-center lg:pr-12 lg:w-6/12 lg:text-left'>
+    <div className='container'>
+      <div className='flex flex-col md:items-center lg:flex-row'>
+        <div className='text-center lg:pr-12 lg:w-1/2 lg:text-left'>
           <h1 className='max-w-3xl text-3xl font-black leading-snug md:text-5xl'>
             Modern React Templates, Just For You
           </h1>
@@ -20,17 +20,14 @@ const Hero: VFC = () => {
             </Link>
           </div>
         </div>
-        <div className='flex relative flex-col justify-center mt-12 lg:mt-0'>
-          <div className='flex relative justify-center items-center max-w-3xl md:justify-end lg:max-w-none'>
-            <Image
-              src='/images/mukkblog_topimage_640x350.webp'
-              alt='HeroImage'
-              width={640}
-              height={350}
-              objectFit='cover'
-            />
-          </div>
-        </div>
+        <Image
+          src='/images/heroimage.png'
+          alt='HeroImage'
+          width={400}
+          height={400}
+          objectFit='cover'
+          className='mx-auto'
+        />
       </div>
     </div>
   );
