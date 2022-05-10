@@ -64,7 +64,12 @@ const Footer: VFC = () => {
               <FaInstagram />
             </a>
           </div>
-          <p className='mt-10 text-sm font-medium tracking-wide text-center'>
+          <Link href='/privacypolicy'>
+            <a className='inline-block pb-1 mx-4 mt-5 text-sm text-white hover:text-gray-300 border-b-2 border-transparent hover:border-gray-300 transition duration-300'>
+              PRIVACY POLICY
+            </a>
+          </Link>
+          <p className='mt-5 text-sm font-medium tracking-wide text-center'>
             &copy; Copyright 2022, MUKK PACK. All Rights Reserved.
           </p>
         </div>
