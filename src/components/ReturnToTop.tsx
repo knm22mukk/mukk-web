@@ -33,12 +33,13 @@ const ReturnToTop: VFC = () => {
   return (
     <button
       aria-label='トップに戻る'
+      type='button'
       onClick={returnTop}
-      className={`fixed right-10 bottom-10 p-4 bg-gray-400 rounded-full ${
+      className={`fixed right-10 bottom-10 p-4 bg-blue-400 text-white rounded-full hover:bg-blue-600 text-3xl ${
         active ? 'block' : 'hidden'
       }`}
     >
-      <FaAngleDoubleUp className='w-10 h-10 text-white' />
+      <FaAngleDoubleUp />
     </button>
   );
 };

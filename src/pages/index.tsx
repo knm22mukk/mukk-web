@@ -15,9 +15,9 @@ const Home: NextPage = () => {
       <Features />
       <div className='container'>
         <SectionHeader
-          subheading='BLOG'
-          title='What kind of products do I introduce?'
-          description='このブログサイトでどんな情報を発信するかご紹介します'
+          subheading='LATEST BLOG'
+          title='最新記事'
+          description='直近で更新した新しい記事です。他の記事も是非ご覧ください。'
         />
         <div className='grid gap-4 py-16 lg:grid-cols-3'>
           <BlogCard />

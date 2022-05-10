@@ -9,7 +9,7 @@ const Header: VFC = () => {
   return (
     <header className='flex justify-around items-center py-4 mx-auto border-b-2'>
       <Link href='/' aria-label='むっく||ホームへ'>
-        <a className='hover:text-indigo-600'>
+        <a className='hover:text-indigo-600 hover:opacity-80'>
           <div className='flex justify-between items-center'>
             <Image
               src='/images/logo300x300.png'

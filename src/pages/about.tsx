@@ -13,8 +13,8 @@ const about: NextPage = () => {
       />
       <SectionHeader
         subheading='ABOUT'
-        title='Who Is MUKK?'
-        description='このブログサイトでどんな情報を発信するかご紹介します'
+        title='包装資材営業マンむっくとは？'
+        description='簡単に自己紹介をさせていただきます'
       />
       <AboutMe />
     </Layout>

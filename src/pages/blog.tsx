@@ -13,8 +13,8 @@ const blog: NextPage = () => {
       />
       <SectionHeader
         subheading='BLOG'
-        title='What kind of products do I introduce?'
-        description='このブログサイトでどんな情報を発信するかご紹介します'
+        title='包装資材の商品情報、市場情報を発信します'
+        description='こまめにアップデートしますので是非チェックお願いします'
       />
       <div className='container'>
         <div className='grid gap-4 py-16 sm:grid-cols-2 lg:grid-cols-3'>

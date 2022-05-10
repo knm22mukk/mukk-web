@@ -4,15 +4,14 @@ import { VFC } from 'react';
 
 const Hero: VFC = () => {
   return (
-    <div className='container'>
+    <section className='container'>
       <div className='flex flex-col md:items-center lg:flex-row'>
         <div className='text-center lg:pr-12 lg:w-1/2 lg:text-left'>
           <h1 className='max-w-3xl text-3xl font-black leading-snug md:text-5xl'>
-            Modern React Templates, Just For You
+            Package Material Blog Site
           </h1>
           <p className='my-5 mx-auto max-w-lg text-sm font-medium text-gray-600 dark:text-white lg:my-8 lg:mx-0 lg:text-base'>
-            Our templates are easy to setup, understand and customize. Fully modular components with
-            a variety of pages and components.
+            このサイトは包装資材営業マンのむっくが商品情報や市場環境を発信する個人ブログサイトです
           </p>
           <div className='flex flex-col justify-center items-center mt-8 sm:flex-row lg:justify-start'>
             <Link href='/blog'>
@@ -20,16 +19,19 @@ const Hero: VFC = () => {
             </Link>
           </div>
         </div>
-        <Image
-          src='/images/heroimage.png'
-          alt='HeroImage'
-          width={400}
-          height={400}
-          objectFit='cover'
-          className='mx-auto'
-        />
+        <div className='flex flex-col justify-center mt-12 lg:mt-0'>
+          <div className='flex justify-center items-center max-w-3xl md:justify-end lg:max-w-none'>
+            <Image
+              src='/images/heroimage.png'
+              alt='HeroImage'
+              width={400}
+              height={400}
+              objectFit='cover'
+            />
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

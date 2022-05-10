@@ -13,8 +13,8 @@ const contact: NextPage = () => {
       />
       <SectionHeader
         subheading='CONTACT'
-        title='What kind of products do I introduce?'
-        description='このブログサイトでどんな情報を発信するかご紹介します'
+        title='お気軽にお問い合わせください'
+        description='ご連絡をいただいてから2、3日以内にご返信させていただきます'
       />
       <div className='container py-10'>
         <div className='flex flex-col justify-between mx-auto md:flex-row'>
