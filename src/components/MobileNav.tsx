@@ -25,12 +25,12 @@ const MobileNav: VFC = () => {
           open ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <nav className='fixed px-12 mt-8 w-full h-full'>
+        <nav className='fixed py-10 px-12 w-full h-full'>
           {headerNavLinks.map((link) => (
-            <div key={link.title} className='mt-5'>
+            <div key={link.title} className='py-5'>
               <Link href={link.href}>
                 <a
-                  className='flex justify-center text-lg font-bold tracking-wide hover:text-indigo-600'
+                  className='flex justify-center text-2xl font-bold tracking-wide hover:text-indigo-600'
                   onClick={handleClick}
                 >
                   {link.title}
