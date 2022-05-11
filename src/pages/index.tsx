@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       <SEO pageTitle='MUKK PACK' />
       <Hero />
       <Features />
-      <div className='container'>
+      <div className='container py-8'>
         <SectionHeader
           subheading='LATEST BLOG'
           title='最新記事'

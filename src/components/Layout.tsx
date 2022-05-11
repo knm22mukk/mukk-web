@@ -11,7 +11,7 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <Header />
-      <main className='py-16'>
+      <main className='py-8'>
         {children}
         <ReturnToTop />
       </main>

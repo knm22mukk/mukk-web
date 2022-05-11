@@ -4,7 +4,7 @@ import { VFC } from 'react';
 
 const Hero: VFC = () => {
   return (
-    <section className='container'>
+    <section className='container py-8'>
       <div className='flex flex-col md:items-center lg:flex-row'>
         <div className='text-center lg:pr-12 lg:w-7/12 lg:text-left'>
           <h1 className='max-w-3xl text-3xl font-black leading-snug md:text-5xl'>
