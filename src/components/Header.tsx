@@ -12,7 +12,7 @@ const Header: VFC = () => {
         <a className='hover:text-indigo-600 hover:opacity-80'>
           <div className='flex justify-between items-center'>
             <Image
-              src='/images/logo300x300.png'
+              src='/images/logo70x70.webp'
               width={70}
               height={70}
               alt='mukklogo'

@@ -29,7 +29,7 @@ const contact: NextPage = () => {
         <div className='flex flex-col justify-between mx-auto md:flex-row'>
           <div className='flex shrink-0 justify-center items-center mx-auto w-full max-w-md md:mx-0 md:w-1/3'>
             <Image
-              src='/images/mailbox.png'
+              src='/images/mailbox.webp'
               width={300}
               height={300}
               alt='ContactUs'

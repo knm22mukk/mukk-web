@@ -6,9 +6,9 @@ const Hero: VFC = () => {
   return (
     <section className='container'>
       <div className='flex flex-col md:items-center lg:flex-row'>
-        <div className='text-center lg:pr-12 lg:w-1/2 lg:text-left'>
+        <div className='text-center lg:pr-12 lg:w-7/12 lg:text-left'>
           <h1 className='max-w-3xl text-3xl font-black leading-snug md:text-5xl'>
-            Package Material Blog Site
+            むっくの包装資材ブログ
           </h1>
           <p className='my-5 mx-auto max-w-lg text-sm font-medium text-gray-600 dark:text-white lg:my-8 lg:mx-0 lg:text-base'>
             このサイトは包装資材営業マンのむっくが商品情報や市場環境を発信する個人ブログサイトです
@@ -22,7 +22,7 @@ const Hero: VFC = () => {
         <div className='flex flex-col justify-center mt-12 lg:mt-0'>
           <div className='flex justify-center items-center max-w-3xl md:justify-end lg:max-w-none'>
             <Image
-              src='/images/heroimage.png'
+              src='/images/heroimage.webp'
               alt='HeroImage'
               width={400}
               height={400}

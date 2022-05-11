@@ -8,7 +8,7 @@ const AboutMe = () => {
       <div className='grid lg:grid-cols-2 lg:gap-x-8'>
         <div className='flex flex-col items-center'>
           <Image
-            src='/images/logo300x300.png'
+            src='/images/logo300x300.webp'
             alt='MukkImage'
             width={300}
             height={300}
