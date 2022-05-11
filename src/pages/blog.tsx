@@ -1,5 +1,6 @@
 import { NextPage } from 'next';
 import BlogCard from '@components/BlogCard';
+import BreadCrumb from '@components/BreadCrumb';
 import Layout from '@components/Layout';
 import SEO from '@components/SEO';
 import SectionHeader from '@components/SectionHeader';
@@ -10,6 +11,14 @@ const blog: NextPage = () => {
       <SEO
         pageTitle='MUKK PACK || ブログ記事一覧'
         pageDescription='包装資材営業マンむっくのブログ記事一覧ページです。包装資材に関する商品情報、市場情報を発信します。'
+      />
+      <BreadCrumb
+        lists={[
+          {
+            title: 'ブログ',
+            to: '/blog',
+          },
+        ]}
       />
       <SectionHeader
         subheading='BLOG'

@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import BreadCrumb from '@components/BreadCrumb';
 import Layout from '@components/Layout';
 import SEO from '@components/SEO';
 import SectionHeader from '@components/SectionHeader';
@@ -9,6 +10,14 @@ const privacypolicy: NextPage = () => {
       <SEO
         pageTitle='むっく || プライバシーポリシー'
         pageDescription='包装資材営業マンむっく || プライバシーポリシー'
+      />
+      <BreadCrumb
+        lists={[
+          {
+            title: 'プライバシーポリシー',
+            to: '/privacypolicy',
+          },
+        ]}
       />
       <SectionHeader subheading='PRIVACY POLICY' title='プライバシーポリシー' description='' />
       <div className='container py-12'>
