@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Date from './Date';
 
 type Props = {
   link: string;
@@ -25,8 +26,8 @@ const BlogCard = ({ link, title, description, date }: Props) => {
               <h5 className='absolute top-1/3 px-6 text-2xl font-bold text-white'>{title}</h5>
             </div>
             <div className='p-5'>
-              <div className='mt-4 text-xs italic font-semibold text-gray-600 dark:text-white uppercase'>
-                {date}
+              <div className='mt-4 text-xs italic font-semibold text-gray-600 dark:text-white'>
+                <Date dateString={date} />
               </div>
               <p className='mt-5 text-xl font-black hover:text-indigo-600'>{description}</p>
             </div>
