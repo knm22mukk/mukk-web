@@ -12,7 +12,7 @@ type Lists = {
 
 const BreadCrumb = ({ lists }: Props): JSX.Element => {
   return (
-    <div className='container'>
+    <div className='container py-2'>
       <ol className='flex overflow-x-auto font-bold whitespace-nowrap' aria-label='breadcrumb'>
         <li className='flex items-center'>
           <Link href='/'>

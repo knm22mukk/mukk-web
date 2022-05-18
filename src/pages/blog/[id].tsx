@@ -1,5 +1,10 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+import Link from 'next/link';
+import BreadCrumb from '@components/BreadCrumb';
 import Layout from '@components/Layout';
+import SEO from '@components/SEO';
+import SectionHeader from '@components/SectionHeader';
+import ToContact from '@components/ToContact';
 import { client } from '@libs/client';
 import type { Article } from 'types/blog';
 
@@ -27,13 +32,35 @@ export const getStaticProps: GetStaticProps = async (context) => {
 const BlogId: NextPage<Props> = ({ article }) => {
   return (
     <Layout>
-      <h1>{article.title}</h1>
-      <p>{article.publishedAt}</p>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `${article.body}`,
-        }}
+      <SEO pageTitle={`MUKK PAKK || ${article.title}`} pageDescription={article.description} />
+      <BreadCrumb
+        lists={[
+          {
+            title: 'ブログ',
+            to: '/blog',
+          },
+          {
+            title: article.title,
+            to: article.id,
+          },
+        ]}
       />
+      <SectionHeader title={article.title} description={article.description} />
+      <p className='py-3 text-sm text-center'>{article.publishedAt}</p>
+      <div className='container py-8 lg:px-24'>
+        <article
+          dangerouslySetInnerHTML={{
+            __html: `${article.body}`,
+          }}
+          className='max-w-none prose dark:prose-invert'
+        />
+      </div>
+      <div className='flex justify-center mb-8'>
+        <Link href='/blog'>
+          <a className='btn'>一覧に戻る</a>
+        </Link>
+      </div>
+      <ToContact />
     </Layout>
   );
 };
