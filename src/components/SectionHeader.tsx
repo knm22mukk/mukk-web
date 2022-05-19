@@ -1,5 +1,5 @@
 type Props = {
-  subheading: string;
+  subheading?: string;
   title: string;
   description: string;
 };
