@@ -1,15 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Date from './Date';
+import Date from '@components/Date';
 
 type Props = {
+  imageSrc: string;
   link: string;
   title: string;
   description: string;
   date: string;
 };
 
-const BlogCard = ({ link, title, description, date }: Props) => {
+const BlogCard = ({ link, imageSrc, title, description, date }: Props) => {
   return (
     <Link href={`/blog/${link}`}>
       <a>
@@ -17,7 +18,7 @@ const BlogCard = ({ link, title, description, date }: Props) => {
           <div className='hover:text-indigo-600 rounded-lg border border-gray-200 shadow-md transition duration-500 hover:scale-105'>
             <div className='relative'>
               <Image
-                src='/images/blog_banner384x216.webp'
+                src={imageSrc}
                 width={384}
                 height={216}
                 alt='BlogImage'

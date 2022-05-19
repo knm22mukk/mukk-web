@@ -1,6 +1,9 @@
 export type Article = {
   id: string;
   title: string;
+  image: {
+    url: string;
+  };
   description: string;
   body: string;
   category: Category[];
