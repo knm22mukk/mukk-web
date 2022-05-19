@@ -22,7 +22,7 @@ const BlogCard = ({ link, imageSrc, title, description, date }: Props) => {
                 width={384}
                 height={216}
                 alt='BlogImage'
-                className='rounded-t-lg hover:opacity-80'
+                className='rounded-t-lg'
               />
               <h5 className='absolute top-1/3 px-6 text-2xl font-bold text-white'>{title}</h5>
             </div>
