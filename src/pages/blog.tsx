@@ -52,7 +52,6 @@ const blog: NextPage<Props> = ({ articles, categories }) => {
               imageSrc={article.image.url}
               link={article.id}
               key={article.id}
-              title={article.title}
               description={article.description}
               date={article.publishedAt}
             />

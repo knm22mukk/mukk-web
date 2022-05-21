@@ -29,7 +29,7 @@ const Home: NextPage<Props> = ({ articles }) => {
       <SEO pageTitle='MUKK PACK' />
       <Hero />
       <Features />
-      <div className='container py-8'>
+      <section className='container py-8'>
         <SectionHeader
           subheading='LATEST BLOG'
           title='最新記事'
@@ -41,13 +41,12 @@ const Home: NextPage<Props> = ({ articles }) => {
               imageSrc={article.image.url}
               link={article.id}
               key={article.id}
-              title={article.title}
               description={article.description}
               date={article.publishedAt}
             />
           ))}
         </div>
-      </div>
+      </section>
       <ToContact />
     </Layout>
   );

@@ -5,7 +5,6 @@ import BreadCrumb from '@components/BreadCrumb';
 import Date from '@components/Date';
 import Layout from '@components/Layout';
 import SEO from '@components/SEO';
-import SectionHeader from '@components/SectionHeader';
 import ToContact from '@components/ToContact';
 import { client } from '@libs/client';
 import type { Article } from 'types/blog';
@@ -53,7 +52,7 @@ const BlogId: NextPage<Props> = ({ article }) => {
       />
 
       <div className='container py-8 lg:px-24'>
-        <div className='relative mb-10'>
+        <div className='relative'>
           <Image
             src={article.image.url}
             width={1200}
@@ -61,11 +60,9 @@ const BlogId: NextPage<Props> = ({ article }) => {
             alt={article.title}
             className='rounded-lg'
           />
-          <h5 className='absolute top-1/3 px-6 text-2xl font-bold text-white lg:text-5xl'>
-            {article.title}
-          </h5>
         </div>
-        <p className='text-xl text-center'>
+        <p className='my-8 text-lg text-right text-gray-500 dark:text-white'>
+          投稿日：
           <Date dateString={article.publishedAt} />
         </p>
         <div

@@ -18,7 +18,7 @@ const ToContact: VFC = () => {
             />
           </div>
           <div className='pb-8 mx-auto w-full max-w-md md:order-first md:py-16 md:mx-0 md:mr-12 md:max-w-none lg:mr-16 '>
-            <div className='text-center md:text-left'>
+            <div className='text-center md:px-4 md:text-left'>
               <SectionHeader
                 subheading='CONTACT'
                 title='お気軽にお問い合わせください'
