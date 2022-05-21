@@ -1,11 +1,41 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
+import { useState } from 'react';
 import BreadCrumb from '@components/BreadCrumb';
 import Layout from '@components/Layout';
 import SEO from '@components/SEO';
 import SectionHeader from '@components/SectionHeader';
 
-const contact: NextPage = () => {
+const Contact: NextPage = () => {
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    msg: '',
+  });
+
+  const handleSubmit = (e: React.FormEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    fetch('/api/sendMail', {
+      method: 'POST',
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
+        msg: form.msg,
+      }),
+    })
+      .then((res) => {
+        console.log('Response received');
+        if (res.status === 200) {
+          console.log('Response succeeded!');
+        } else {
+          console.log(`Error: Status Code ${res.status}`);
+        }
+      })
+      .catch((e) => {
+        console.log(`Error: ${e}`);
+      });
+  };
+
   return (
     <Layout>
       <SEO
@@ -45,27 +75,64 @@ const contact: NextPage = () => {
                 >
                   お名前<span className='text-red-500'>*</span>
                 </label>
-                <input type='text' name='name' className='formInput' />
 
+                <input
+                  onChange={(e) => {
+                    const val = e.currentTarget.value;
+                    setForm((props) => ({
+                      ...props,
+                      name: val !== null ? val : '',
+                    }));
+                  }}
+                  value={form.name}
+                  type='text'
+                  name='name'
+                  className='formInput'
+                />
                 <label
                   htmlFor='email'
                   className='mt-8 mb-2 font-light text-gray-500 dark:text-white'
                 >
                   メールアドレス<span className='text-red-500'>*</span>
                 </label>
-                <input type='text' name='email' className='formInput' />
-
+                <input
+                  onChange={(e) => {
+                    const val = e.currentTarget.value;
+                    setForm((props) => ({
+                      ...props,
+                      email: val !== null ? val : '',
+                    }));
+                  }}
+                  name='email'
+                  type='text'
+                  className='formInput'
+                />
                 <label
                   htmlFor='message'
                   className='mt-8 mb-2 font-light text-gray-500 dark:text-white'
                 >
                   メッセージ<span className='text-red-500'>*</span>
                 </label>
-                <textarea name='message' rows={7} className='formInput' />
-
-                <div className='pt-8 text-center'>
-                  <button className='btn'>送信する</button>
-                </div>
+                <textarea
+                  onChange={(e) => {
+                    const val = e.currentTarget.value;
+                    setForm((props) => ({
+                      ...props,
+                      msg: val !== null ? val : '',
+                    }));
+                  }}
+                  name='text'
+                  className='formInput'
+                  rows={5}
+                ></textarea>
+                <input
+                  onClick={async (e) => {
+                    await handleSubmit(e);
+                  }}
+                  type='submit'
+                  value='送信する'
+                  className='mt-10 btn'
+                />
               </form>
             </div>
           </div>
@@ -75,4 +142,4 @@ const contact: NextPage = () => {
   );
 };
 
-export default contact;
+export default Contact;
