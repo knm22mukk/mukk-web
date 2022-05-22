@@ -7,28 +7,40 @@ import SEO from '@components/SEO';
 import SectionHeader from '@components/SectionHeader';
 
 const Contact: NextPage = () => {
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    msg: '',
-  });
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [msg, setMsg] = useState('');
+  const [buttonText, setbuttonText] = useState('送信する');
+
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [showFailureMessage, setShowFailureMessage] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLInputElement>) => {
     e.preventDefault();
+    setbuttonText('送信中...');
     fetch('/api/sendMail', {
       method: 'POST',
       body: JSON.stringify({
-        name: form.name,
-        email: form.email,
-        msg: form.msg,
+        name: name,
+        email: email,
+        msg: msg,
       }),
     })
       .then((res) => {
         console.log('Response received');
         if (res.status === 200) {
           console.log('Response succeeded!');
+          setName('');
+          setEmail('');
+          setMsg('');
+          setShowSuccessMessage(true);
+          setShowFailureMessage(false);
+          setbuttonText('送信する');
         } else {
           console.log(`Error: Status Code ${res.status}`);
+          setShowSuccessMessage(false);
+          setShowFailureMessage(true);
+          setbuttonText('再送信する');
         }
       })
       .catch((e) => {
@@ -68,6 +80,16 @@ const Contact: NextPage = () => {
           </div>
           <div className='mx-auto w-full md:order-first md:mx-0 md:mr-12 md:max-w-none lg:mr-16'>
             <div className='text-left'>
+              {showSuccessMessage && (
+                <p className='my-2 text-sm font-semibold text-green-500'>
+                  ありがとうございます！お問い合わせは正常に送信されました！
+                </p>
+              )}
+              {showFailureMessage && (
+                <p className='text-red-500'>
+                  エラーにより送信できませんでした。もう一度お願いいたします。
+                </p>
+              )}
               <form className='flex flex-col p-8 mx-auto max-w-2xl'>
                 <label
                   htmlFor='name'
@@ -78,13 +100,9 @@ const Contact: NextPage = () => {
 
                 <input
                   onChange={(e) => {
-                    const val = e.currentTarget.value;
-                    setForm((props) => ({
-                      ...props,
-                      name: val !== null ? val : '',
-                    }));
+                    setName(e.target.value);
                   }}
-                  value={form.name}
+                  value={name}
                   type='text'
                   name='name'
                   className='formInput'
@@ -97,12 +115,9 @@ const Contact: NextPage = () => {
                 </label>
                 <input
                   onChange={(e) => {
-                    const val = e.currentTarget.value;
-                    setForm((props) => ({
-                      ...props,
-                      email: val !== null ? val : '',
-                    }));
+                    setEmail(e.target.value);
                   }}
+                  value={email}
                   name='email'
                   type='text'
                   className='formInput'
@@ -115,12 +130,9 @@ const Contact: NextPage = () => {
                 </label>
                 <textarea
                   onChange={(e) => {
-                    const val = e.currentTarget.value;
-                    setForm((props) => ({
-                      ...props,
-                      msg: val !== null ? val : '',
-                    }));
+                    setMsg(e.target.value);
                   }}
+                  value={msg}
                   name='text'
                   className='formInput'
                   rows={5}
@@ -130,8 +142,8 @@ const Contact: NextPage = () => {
                     await handleSubmit(e);
                   }}
                   type='submit'
-                  value='送信する'
-                  className='mt-10 btn'
+                  value={buttonText}
+                  className='mt-10 cursor-pointer btn'
                 />
               </form>
             </div>

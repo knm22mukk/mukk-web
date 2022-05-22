@@ -15,7 +15,7 @@ const sendMail = async (req: NextApiRequest, res: NextApiResponse) => {
   const data = JSON.parse(req.body);
   await transporter.sendMail({
     from: process.env.MAIL_ADDRESS,
-    to: data.email,
+    to: process.env.MAIL_ADDRESS,
     subject: '以下の内容でお問い合わせを受け付けました',
     text: `
     名前
