@@ -1,11 +1,53 @@
 import { NextPage } from 'next';
 import Image from 'next/image';
+import { useState } from 'react';
 import BreadCrumb from '@components/BreadCrumb';
 import Layout from '@components/Layout';
 import SEO from '@components/SEO';
 import SectionHeader from '@components/SectionHeader';
 
-const contact: NextPage = () => {
+const Contact: NextPage = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [msg, setMsg] = useState('');
+  const [buttonText, setbuttonText] = useState('送信する');
+
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [showFailureMessage, setShowFailureMessage] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    setbuttonText('送信中...');
+    fetch('/api/sendMail', {
+      method: 'POST',
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        msg: msg,
+      }),
+    })
+      .then((res) => {
+        console.log('Response received');
+        if (res.status === 200) {
+          console.log('Response succeeded!');
+          setName('');
+          setEmail('');
+          setMsg('');
+          setShowSuccessMessage(true);
+          setShowFailureMessage(false);
+          setbuttonText('送信する');
+        } else {
+          console.log(`Error: Status Code ${res.status}`);
+          setShowSuccessMessage(false);
+          setShowFailureMessage(true);
+          setbuttonText('再送信する');
+        }
+      })
+      .catch((e) => {
+        console.log(`Error: ${e}`);
+      });
+  };
+
   return (
     <Layout>
       <SEO
@@ -38,6 +80,16 @@ const contact: NextPage = () => {
           </div>
           <div className='mx-auto w-full md:order-first md:mx-0 md:mr-12 md:max-w-none lg:mr-16'>
             <div className='text-left'>
+              {showSuccessMessage && (
+                <p className='my-2 text-sm font-semibold text-green-500'>
+                  ありがとうございます！お問い合わせは正常に送信されました！
+                </p>
+              )}
+              {showFailureMessage && (
+                <p className='text-red-500'>
+                  エラーにより送信できませんでした。もう一度お願いいたします。
+                </p>
+              )}
               <form className='flex flex-col p-8 mx-auto max-w-2xl'>
                 <label
                   htmlFor='name'
@@ -45,27 +97,54 @@ const contact: NextPage = () => {
                 >
                   お名前<span className='text-red-500'>*</span>
                 </label>
-                <input type='text' name='name' className='formInput' />
 
+                <input
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
+                  value={name}
+                  type='text'
+                  name='name'
+                  className='formInput'
+                />
                 <label
                   htmlFor='email'
                   className='mt-8 mb-2 font-light text-gray-500 dark:text-white'
                 >
                   メールアドレス<span className='text-red-500'>*</span>
                 </label>
-                <input type='text' name='email' className='formInput' />
-
+                <input
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                  value={email}
+                  name='email'
+                  type='text'
+                  className='formInput'
+                />
                 <label
                   htmlFor='message'
                   className='mt-8 mb-2 font-light text-gray-500 dark:text-white'
                 >
                   メッセージ<span className='text-red-500'>*</span>
                 </label>
-                <textarea name='message' rows={7} className='formInput' />
-
-                <div className='pt-8 text-center'>
-                  <button className='btn'>送信する</button>
-                </div>
+                <textarea
+                  onChange={(e) => {
+                    setMsg(e.target.value);
+                  }}
+                  value={msg}
+                  name='text'
+                  className='formInput'
+                  rows={5}
+                ></textarea>
+                <input
+                  onClick={async (e) => {
+                    await handleSubmit(e);
+                  }}
+                  type='submit'
+                  value={buttonText}
+                  className='mt-10 cursor-pointer btn'
+                />
               </form>
             </div>
           </div>
@@ -75,4 +154,4 @@ const contact: NextPage = () => {
   );
 };
 
-export default contact;
+export default Contact;
