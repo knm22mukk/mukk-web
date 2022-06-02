@@ -38,6 +38,11 @@
   dependencies:
     "regenerator-runtime" "^0.13.4"
 
+"@corex/deepmerge@^4.0.14":
+  "integrity" "sha512-Sh6eHsEwxHVKu6Cu90I+nJ/6Ql1MuHqjNuFQVBOuFHpUDtv2rL5FYlhAfd/Gfj6W76nBt9zqj5lBPHhwrFxU9g=="
+  "resolved" "https://registry.npmjs.org/@corex/deepmerge/-/deepmerge-4.0.14.tgz"
+  "version" "4.0.14"
+
 "@eslint/eslintrc@^1.2.1":
   "integrity" "sha512-bxvbYnBPN1Gibwyp6NrpnFzA3YtRL3BBAyEAFVIpNTm2Rn4Vy87GA5M4aSn3InRrlsbX5N0GW7XIx+U4SAEKdQ=="
   "resolved" "https://registry.npmjs.org/@eslint/eslintrc/-/eslintrc-1.2.1.tgz"
@@ -67,7 +72,7 @@
   "resolved" "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz"
   "version" "1.2.1"
 
-"@next/env@12.1.4":
+"@next/env@*", "@next/env@12.1.4":
   "integrity" "sha512-7gQwotJDKnfMxxXd8xJ2vsX5AzyDxO3zou0+QOXX8/unypA6icw5+wf6A62yKZ6qQ4UZHHxS68pb6UV+wNneXg=="
   "resolved" "https://registry.npmjs.org/@next/env/-/env-12.1.4.tgz"
   "version" "12.1.4"
@@ -1426,12 +1431,20 @@
   "resolved" "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz"
   "version" "1.4.0"
 
+"next-sitemap@^3.0.2":
+  "integrity" "sha512-65PufQuQiaF2I2r4by5pu+47YDk04Wwzgwn30UZ3ieQft8MOaG5JXsNqhTu2/NvR0BlWdOwPhShxeTrxZYdunQ=="
+  "resolved" "https://registry.npmjs.org/next-sitemap/-/next-sitemap-3.0.2.tgz"
+  "version" "3.0.2"
+  dependencies:
+    "@corex/deepmerge" "^4.0.14"
+    "minimist" "^1.2.6"
+
 "next-themes@^0.1.1":
   "integrity" "sha512-Iqxt6rhS/KfK/iHJ0tfFjTcdLEAI0AgwFuAFrMwLOPK5e+MI3I+fzyvBoS+VaOS+NldUiazurhgwYhrfV0VXsQ=="
   "resolved" "https://registry.npmjs.org/next-themes/-/next-themes-0.1.1.tgz"
   "version" "0.1.1"
 
-"next@>=10.2.0", "next@>=11.1.1", "next@12.1.4":
+"next@*", "next@>=10.2.0", "next@>=11.1.1", "next@12.1.4":
   "integrity" "sha512-DA4g97BM4Z0nKtDvCTm58RxdvoQyYzeg0AeVbh0N4Y/D8ELrNu47lQeEgRGF8hV4eQ+Sal90zxrJQQG/mPQ8CQ=="
   "resolved" "https://registry.npmjs.org/next/-/next-12.1.4.tgz"
   "version" "12.1.4"
