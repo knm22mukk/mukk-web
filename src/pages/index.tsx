@@ -38,6 +38,7 @@ const Home: NextPage<Props> = ({ articles }) => {
         <div className='grid gap-4 py-16 lg:grid-cols-3'>
           {articles.map((article) => (
             <BlogCard
+              title={article.title}
               imageSrc={article.image.url}
               link={article.id}
               key={article.id}

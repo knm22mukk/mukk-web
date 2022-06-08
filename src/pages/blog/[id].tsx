@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
+import BlogImage from '@components/BlogImage';
 import BreadCrumb from '@components/BreadCrumb';
 import Date from '@components/Date';
 import Layout from '@components/Layout';
@@ -53,11 +53,9 @@ const BlogId: NextPage<Props> = ({ article }) => {
 
       <div className='container py-8 lg:px-24'>
         <div className='relative'>
-          <Image
-            src={article.image.url}
-            width={1200}
-            height={720}
-            alt={article.title}
+          <BlogImage
+            baseImageUrl={article.image.url}
+            title={article.title}
             className='rounded-lg'
           />
         </div>
