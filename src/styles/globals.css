@@ -9,3 +9,7 @@
 .formInput {
   @apply py-1 px-3 w-full text-base leading-8 text-gray-700 bg-gray-100 focus:bg-white rounded border border-gray-300 focus:border-indigo-500 outline-none focus:ring-2 focus:ring-indigo-200 transition-colors duration-200 ease-in-out;
 }
+
+.article h2 {
+  @apply p-5 my-5 bg-gray-100 dark:bg-gray-600 border-l-4 border-indigo-400;
+}

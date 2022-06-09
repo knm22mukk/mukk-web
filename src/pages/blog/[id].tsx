@@ -52,13 +52,7 @@ const BlogId: NextPage<Props> = ({ article }) => {
       />
 
       <div className='container py-8 lg:px-24'>
-        <div className='relative'>
-          <BlogImage
-            baseImageUrl={article.image.url}
-            title={article.title}
-            className='rounded-lg'
-          />
-        </div>
+        <BlogImage baseImageUrl={article.image.url} title={article.title} className='rounded-lg' />
         <p className='my-8 text-lg text-right text-gray-500 dark:text-white'>
           投稿日：
           <Date dateString={article.publishedAt} />
@@ -67,7 +61,7 @@ const BlogId: NextPage<Props> = ({ article }) => {
           dangerouslySetInnerHTML={{
             __html: `${article.body}`,
           }}
-          className='max-w-none prose dark:prose-invert'
+          className='max-w-none prose dark:prose-invert article'
         />
       </div>
       <div className='flex justify-center mb-8'>
