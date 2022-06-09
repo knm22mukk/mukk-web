@@ -11,7 +11,7 @@ const Hero: VFC = () => {
             むっくの包装資材ブログ
           </h1>
           <p className='my-5 mx-auto max-w-lg text-sm font-medium text-gray-600 dark:text-white lg:my-8 lg:mx-0 lg:text-base'>
-            このサイトは包装資材営業マンのむっくが商品情報や市場環境を発信する個人ブログサイトです
+            このサイトは包装資材営業マンのむっくが包装資材、梱包資材に関する情報を発信する個人ブログサイトです
           </p>
           <div className='flex flex-col justify-center items-center mt-8 sm:flex-row lg:justify-start'>
             <Link href='/blog'>
