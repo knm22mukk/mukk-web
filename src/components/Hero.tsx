@@ -21,7 +21,7 @@ const Hero: VFC = () => {
         </div>
         <div className='flex flex-col justify-center mt-12 lg:mt-0'>
           <div className='flex justify-center items-center max-w-3xl md:justify-end lg:max-w-none'>
-            <Image src='/images/heroImage.webp' alt='HeroImage' width={400} height={350} />
+            <Image src='/images/heroImage.webp' alt='HeroImage' width={500} height={430} />
           </div>
         </div>
       </div>
