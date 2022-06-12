@@ -22,7 +22,7 @@ const Hero: VFC = () => {
         <div className='flex flex-col justify-center mt-12 lg:mt-0'>
           <div className='flex justify-center items-center max-w-3xl md:justify-end lg:max-w-none'>
             <Image
-              src='/images/heroImage.webp'
+              src='/images/TopPageImage.webp'
               alt='HeroImage'
               width={500}
               height={430}
