@@ -14,6 +14,7 @@ const ToContact: VFC = () => {
               width={500}
               height={500}
               alt='ContactUs'
+              objectFit='cover'
               className='rounded-lg'
             />
           </div>
