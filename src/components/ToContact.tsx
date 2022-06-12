@@ -10,7 +10,7 @@ const ToContact: VFC = () => {
         <div className='flex flex-col justify-between mx-auto md:flex-row'>
           <div className='flex shrink-0 items-center p-5 mx-auto w-full max-w-md md:mx-0 md:w-5/12'>
             <Image
-              src='/images/mailbox.webp'
+              src='/images/mailImage.webp'
               width={500}
               height={500}
               alt='ContactUs'

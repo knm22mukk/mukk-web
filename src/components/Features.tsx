@@ -17,7 +17,7 @@ const Features = () => {
                 <div className='flex justify-center items-center mb-4 w-16 h-16 bg-indigo-50 rounded-full sm:mx-auto sm:w-24 sm:h-24'>
                   <AiOutlineCheck className='w-12 h-12 text-indigo-600' />
                 </div>
-                <h4 className='mb-3 text-2xl font-bold leading-5'>早く多くの情報を</h4>
+                <h3 className='mb-3 text-2xl font-bold leading-5'>早く多くの情報を</h3>
                 <p className='mb-3 text-sm'>
                   包装資材の市場環境も早いスピードで変化しています。新商品や世の中の流れに応じた市場環境の情報を多くかつスピード感を持ってご紹介します。
                 </p>
@@ -26,7 +26,7 @@ const Features = () => {
                 <div className='flex justify-center items-center mb-4 w-16 h-16 bg-indigo-50 rounded-full sm:mx-auto sm:w-24 sm:h-24'>
                   <AiOutlineCheck className='w-12 h-12 text-indigo-600' />
                 </div>
-                <h4 className='mb-3 text-2xl font-bold leading-5'>SNSでも発信してます</h4>
+                <h3 className='mb-3 text-2xl font-bold leading-5'>SNSでも発信してます</h3>
                 <p className='mb-3 text-sm'>
                   このブログサイトだけではなく、SNSでも発信しています。良ければページ下部にあるアイコンからフォローをお願いします。特にInstagramに力を入れています。
                 </p>
@@ -35,7 +35,7 @@ const Features = () => {
                 <div className='flex justify-center items-center mb-4 w-16 h-16 bg-indigo-50 rounded-full sm:mx-auto sm:w-24 sm:h-24'>
                   <AiOutlineCheck className='w-12 h-12 text-indigo-600' />
                 </div>
-                <h4 className='mb-3 text-2xl font-bold leading-5'>個別に商品提案も</h4>
+                <h3 className='mb-3 text-2xl font-bold leading-5'>個別に商品提案も</h3>
                 <p className='mb-3 text-sm'>
                   商品に関することやお探しのアイテムがありましたら、商品のご紹介もさせていただきます。お問い合わせやご質問等ございましたらお気軽にお問合せフォームよりご連絡ください。
                 </p>
@@ -44,7 +44,7 @@ const Features = () => {
                 <div className='flex justify-center items-center mb-4 w-16 h-16 bg-indigo-50 rounded-full sm:mx-auto sm:w-24 sm:h-24'>
                   <AiOutlineCheck className='w-12 h-12 text-indigo-600' />
                 </div>
-                <h4 className='mb-3 text-2xl font-bold leading-5'>プログラミング学習として</h4>
+                <h3 className='mb-3 text-2xl font-bold leading-5'>プログラミング学習として</h3>
                 <p className='mb-3 text-sm'>
                   私のプログラミング学習のアウトプットとしてイチから全て私が作成しました。素人のため至らぬ点もあるかと思います。改善点がありましたら、お問合せフォームからご連絡をいただけますと幸いです。
                 </p>
