@@ -11,7 +11,7 @@ const Header: VFC = () => {
       <Link href='/' aria-label='むっく||ホームへ'>
         <a className='hover:text-indigo-600 hover:opacity-80'>
           <div className='flex justify-between items-center'>
-            <Image src='/images/logo200x200.webp' width={70} height={70} alt='mukklogo' />
+            <Image src='/images/logo200x200.png' width={90} height={90} alt='mukklogo' />
             <div className='text-3xl font-black'>MUKK PACK</div>
           </div>
         </a>
