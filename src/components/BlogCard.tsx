@@ -15,7 +15,7 @@ const BlogCard = ({ link, imageSrc, title, description, date }: Props) => {
     <Link href={`/blog/${link}`}>
       <a>
         <div className='mx-auto max-w-sm'>
-          <div className='hover:text-indigo-600 rounded-lg border border-gray-200 shadow-md transition duration-500 hover:scale-105'>
+          <div className='hover:text-indigo-600 rounded-lg border border-gray-200 shadow-md transition duration-300 hover:scale-105'>
             <BlogImage
               baseImageUrl={imageSrc}
               width={384}

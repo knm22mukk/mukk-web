@@ -1,8 +1,9 @@
 import Image from 'next/image';
+import { VFC } from 'react';
 import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
 import { siteMetaData } from '@data/siteMetaData';
 
-const AboutMe = () => {
+const AboutMe: VFC = () => {
   return (
     <div className='container pt-16'>
       <div className='text-center'>
@@ -19,7 +20,7 @@ const AboutMe = () => {
             aria-label='twitterへのリンク'
             target='_blank'
             rel='noopener noreferrer'
-            className='p-3 text-3xl font-bold  hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-600 duration-300 '
+            className='p-3 text-3xl font-bold  hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-600 duration-300'
           >
             <FaTwitter />
           </a>
@@ -28,7 +29,7 @@ const AboutMe = () => {
             aria-label='facebookへのリンク'
             target='_blank'
             rel='noopener noreferrer'
-            className='p-3 text-3xl font-bold  hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-600 duration-300 '
+            className='p-3 text-3xl font-bold  hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-600 duration-300'
           >
             <FaFacebook />
           </a>
@@ -37,13 +38,13 @@ const AboutMe = () => {
             aria-label='instagramへのリンク'
             target='_blank'
             rel='noopener noreferrer'
-            className='p-3 text-3xl font-bold  hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-600 duration-300 '
+            className='p-3 text-3xl font-bold  hover:text-indigo-600 border-b-2 border-transparent hover:border-indigo-600 duration-300'
           >
             <FaInstagram />
           </a>
         </div>
       </div>
-      <div className='container py-8'>
+      <div className='py-8 mx-auto max-w-lg font-medium'>
         <p className='pt-4'>
           ようこそ。
           <br />

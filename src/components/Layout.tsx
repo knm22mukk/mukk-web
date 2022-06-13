@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, VFC } from 'react';
 import Footer from '@components/Footer';
 import Header from '@components/Header';
 import ReturnToTop from '@components/ReturnToTop';
@@ -7,7 +7,7 @@ type Props = {
   children: ReactNode;
 };
 
-const Layout = ({ children }: Props) => {
+const Layout: VFC<Props> = ({ children }) => {
   return (
     <>
       <Header />

@@ -35,7 +35,7 @@ const ReturnToTop: VFC = () => {
       aria-label='トップに戻る'
       type='button'
       onClick={returnTop}
-      className={`fixed right-10 bottom-10 p-4 bg-blue-400 text-white rounded-full hover:bg-blue-600 text-3xl ${
+      className={`fixed right-10 bottom-10 p-4 bg-sky-400 text-white rounded-full hover:bg-sky-500 text-3xl ${
         active ? 'block' : 'hidden'
       }`}
     >

@@ -7,18 +7,12 @@ import { headerNavLinks } from '@data/headerNavLinks';
 
 const Header: VFC = () => {
   return (
-    <header className='flex justify-around items-center py-4 mx-auto border-b-2'>
+    <header className='flex justify-around items-center py-4 h-24 border-b-2'>
       <Link href='/' aria-label='むっく||ホームへ'>
         <a className='hover:text-indigo-600 hover:opacity-80'>
           <div className='flex justify-between items-center'>
-            <Image
-              src='/images/logo200x200.webp'
-              width={70}
-              height={70}
-              alt='mukklogo'
-              className='rounded-full'
-            />
-            <div className='text-3xl font-black tracking-wide'>MUKK PACK</div>
+            <Image src='/images/logo200x200.webp' width={70} height={70} alt='mukklogo' />
+            <div className='text-3xl font-black'>MUKK PACK</div>
           </div>
         </a>
       </Link>

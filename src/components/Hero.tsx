@@ -7,9 +7,7 @@ const Hero: VFC = () => {
     <section className='container py-8'>
       <div className='flex flex-col md:items-center lg:flex-row'>
         <div className='text-center lg:pr-12 lg:w-7/12 lg:text-left'>
-          <h1 className='max-w-3xl text-3xl font-black leading-snug md:text-5xl'>
-            むっくの包装資材ブログ
-          </h1>
+          <h1 className='max-w-3xl text-3xl font-extrabold md:text-5xl'>むっくの包装資材ブログ</h1>
           <p className='my-5 mx-auto max-w-lg text-sm font-medium text-gray-600 dark:text-white lg:my-8 lg:mx-0 lg:text-base'>
             このサイトは包装資材営業マンのむっくが包装資材、梱包資材に関する情報を発信する個人ブログサイトです
           </p>

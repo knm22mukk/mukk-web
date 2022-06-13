@@ -8,14 +8,13 @@ const ToContact: VFC = () => {
     <section className='container py-8'>
       <div className='px-3 bg-white dark:bg-gray-700 rounded-lg border shadow-lg'>
         <div className='flex flex-col justify-between mx-auto md:flex-row'>
-          <div className='flex shrink-0 items-center p-5 mx-auto w-full max-w-md md:mx-0 md:w-5/12'>
+          <div className='flex shrink-0 items-center p-5 mx-auto w-full md:w-5/12'>
             <Image
               src='/images/mailImage.webp'
-              width={500}
-              height={500}
+              width={400}
+              height={400}
               alt='ContactUs'
               objectFit='cover'
-              className='rounded-lg'
             />
           </div>
           <div className='pb-8 mx-auto w-full max-w-md md:order-first md:py-16 md:mx-0 md:mr-12 md:max-w-none lg:mr-16 '>
