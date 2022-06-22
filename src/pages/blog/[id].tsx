@@ -42,7 +42,7 @@ const BlogId: NextPage<Props> = ({ article }) => {
         lists={[
           {
             title: 'ブログ',
-            to: '/blog',
+            to: '/blog/page/1',
           },
           {
             title: article.title,
@@ -65,7 +65,7 @@ const BlogId: NextPage<Props> = ({ article }) => {
         />
       </div>
       <div className='flex justify-center mb-8'>
-        <Link href='/blog'>
+        <Link href='/blog/page/1'>
           <a className='btn'>一覧に戻る</a>
         </Link>
       </div>

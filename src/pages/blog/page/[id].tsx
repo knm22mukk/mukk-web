@@ -1,30 +1,49 @@
-import { NextPage } from 'next';
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import BlogCard from '@components/BlogCard';
 import BreadCrumb from '@components/BreadCrumb';
 import Layout from '@components/Layout';
+import Pagination from '@components/Pagination';
 import SEO from '@components/SEO';
 import SectionHeader from '@components/SectionHeader';
 import { client } from '@libs/client';
-import { Article, Category } from 'types/blog';
+import { Article } from 'types/blog';
 
-export const getStaticProps = async () => {
-  const article = await client.get({ endpoint: 'articles' });
-  const category = await client.get({ endpoint: 'categories' });
+const PER_PAGE = 12;
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const range = (start: number, end: number) =>
+    [...Array(end - start + 1)].map((_, i) => start + i);
+  const data = await client.get({ endpoint: 'articles' });
+
+  const { totalCount } = data;
+  const paths = range(1, Math.ceil(totalCount / PER_PAGE)).map((i) => `/blog/page/${i}`);
+  return { paths, fallback: false };
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const numId = Number(context.params?.id);
+  const offset = (numId - 1) * PER_PAGE;
+  const article = await client.get({
+    endpoint: 'articles',
+    queries: { offset: offset, limit: PER_PAGE },
+  });
 
   return {
     props: {
       articles: article.contents,
-      categories: category.contents,
+      totalCount: article.totalCount,
+      currentPageNumber: numId,
     },
   };
 };
 
 type Props = {
   articles: Article[];
-  categories: Category[];
+  totalCount: number;
+  currentPageNumber: number;
 };
 
-const blog: NextPage<Props> = ({ articles, categories }) => {
+const BlogPageId: NextPage<Props> = ({ articles, totalCount, currentPageNumber }) => {
   return (
     <Layout>
       <SEO
@@ -35,7 +54,7 @@ const blog: NextPage<Props> = ({ articles, categories }) => {
         lists={[
           {
             title: 'ブログ',
-            to: '/blog',
+            to: '/blog/page/1',
           },
         ]}
       />
@@ -44,7 +63,6 @@ const blog: NextPage<Props> = ({ articles, categories }) => {
         title='包装資材の商品情報、市場情報を発信します'
         description='こまめにアップデートしますので是非チェックお願いします'
       />
-
       <div className='container'>
         <div className='grid gap-4 py-16 sm:grid-cols-2 lg:grid-cols-3'>
           {articles.map((article) => (
@@ -59,8 +77,14 @@ const blog: NextPage<Props> = ({ articles, categories }) => {
           ))}
         </div>
       </div>
+      <Pagination
+        currentPageNumber={currentPageNumber}
+        maxPageNumber={Math.ceil(totalCount / PER_PAGE)}
+        PER_PAGE={PER_PAGE}
+        totalCount={totalCount}
+      />
     </Layout>
   );
 };
 
-export default blog;
+export default BlogPageId;

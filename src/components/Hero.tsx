@@ -12,7 +12,7 @@ const Hero: VFC = () => {
             このサイトは包装資材営業マンのむっくが包装資材、梱包資材に関する情報を発信する個人ブログサイトです
           </p>
           <div className='flex flex-col justify-center items-center mt-8 sm:flex-row lg:justify-start'>
-            <Link href='/blog'>
+            <Link href='/blog/page/1'>
               <a className='btn'>ブログ一覧へ</a>
             </Link>
           </div>
