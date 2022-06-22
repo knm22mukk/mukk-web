@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { FC } from 'react';
-import { GrFormPrevious, GrFormNext } from 'react-icons/gr';
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 
 type Props = {
   maxPageNumber: number;
@@ -29,7 +29,7 @@ const Pagination: FC<Props> = ({ maxPageNumber, currentPageNumber, totalCount, P
                 currentPageNumber === 1 ? 'hidden' : ''
               }`}
             >
-              <GrFormPrevious />
+              <FaAngleLeft />
             </button>
           </a>
         </Link>
@@ -62,7 +62,7 @@ const Pagination: FC<Props> = ({ maxPageNumber, currentPageNumber, totalCount, P
                 currentPageNumber === maxPageNumber ? 'hidden' : ''
               }`}
             >
-              <GrFormNext />
+              <FaAngleRight />
             </button>
           </a>
         </Link>
