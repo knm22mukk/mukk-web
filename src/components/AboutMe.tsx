@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import { VFC } from 'react';
+import { FC } from 'react';
 import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
 import { siteMetaData } from '@data/siteMetaData';
 
-const AboutMe: VFC = () => {
+const AboutMe: FC = () => {
   return (
     <div className='container pt-16'>
       <div className='text-center'>
@@ -53,7 +53,7 @@ const AboutMe: VFC = () => {
           私のブログサイトを見に来ていだきありがとうございます。
         </p>
         <p className='pt-4'>
-          私は包装資材の業界に携わってから約７年が経過しました。
+          私は包装資材の業界に携わってから約8年が経過しました。
           <br />
           様々な商品が新たに発売していく中で商品情報や、市場の情報をいち早く多く届けたいと思いこのブログサイトを作成しました。
         </p>

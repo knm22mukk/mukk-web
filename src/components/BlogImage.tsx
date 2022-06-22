@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { VFC } from 'react';
+import { FC } from 'react';
 
 type Props = {
   baseImageUrl: string;
@@ -10,7 +10,7 @@ type Props = {
   className: string;
 };
 
-const BlogImage: VFC<Props> = ({
+const BlogImage: FC<Props> = ({
   baseImageUrl,
   title,
   width = 1280,

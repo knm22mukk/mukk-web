@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { FC } from 'react';
 import BlogImage from '@components/BlogImage';
 import Date from '@components/Date';
 
@@ -10,7 +11,7 @@ type Props = {
   date: string;
 };
 
-const BlogCard = ({ link, imageSrc, title, description, date }: Props) => {
+const BlogCard: FC<Props> = ({ link, imageSrc, title, description, date }) => {
   return (
     <Link href={`/blog/${link}`}>
       <a>

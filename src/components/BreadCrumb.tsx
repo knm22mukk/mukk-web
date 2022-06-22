@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { FC } from 'react';
 import { FaChevronRight } from 'react-icons/fa';
 
 type Props = {
@@ -10,10 +11,10 @@ type Lists = {
   to: string;
 };
 
-const BreadCrumb = ({ lists }: Props): JSX.Element => {
+const BreadCrumb: FC<Props> = ({ lists }) => {
   return (
     <div className='container py-2'>
-      <ol className='flex overflow-x-auto font-bold whitespace-nowrap' aria-label='breadcrumb'>
+      <ol className='flex overflow-x-auto font-bold' aria-label='breadcrumb'>
         <li className='flex items-center'>
           <Link href='/'>
             <a className='text-sm hover:text-indigo-600 underline md:text-base'>ホーム</a>

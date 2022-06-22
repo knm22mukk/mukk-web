@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { FC } from 'react';
 import { siteMetaData } from '@data/siteMetaData';
 
 type Props = {
@@ -10,14 +11,14 @@ type Props = {
   pageImageHeight?: number;
 };
 
-const SEO = ({
+const SEO: FC<Props> = ({
   pageTitle,
   pageDescription,
   pagePath,
   pageImage,
   pageImageWidth,
   pageImageHeight,
-}: Props) => {
+}) => {
   const title = pageTitle ? pageTitle : siteMetaData.title;
   const description = pageDescription ? pageDescription : siteMetaData.description;
   const url = pagePath ? pagePath : siteMetaData.siteUrl;

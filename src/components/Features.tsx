@@ -1,9 +1,10 @@
+import { FC } from 'react';
 import { AiOutlineCheck } from 'react-icons/ai';
 import SectionHeader from '@components/SectionHeader';
 
-const Features = () => {
+const Features: FC = () => {
   return (
-    <section className='py-8 bg-white dark:bg-gray-800'>
+    <section className='py-8 bg-white dark:bg-gray-700'>
       <div className='container mx-auto'>
         <div className='flex flex-col flex-wrap items-center md:flex-row md:justify-center md:items-stretch'>
           <SectionHeader

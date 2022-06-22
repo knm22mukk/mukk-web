@@ -1,7 +1,7 @@
-import { useEffect, useState, VFC } from 'react';
+import { useEffect, useState, FC } from 'react';
 import { FaAngleDoubleUp } from 'react-icons/fa';
 
-const ReturnToTop: VFC = () => {
+const ReturnToTop: FC = () => {
   const [active, setActive] = useState<boolean>(false);
 
   const returnTop = (): void => {
@@ -36,7 +36,7 @@ const ReturnToTop: VFC = () => {
       type='button'
       onClick={returnTop}
       className={`fixed right-10 bottom-10 p-4 bg-sky-400 text-white rounded-full hover:bg-sky-500 text-3xl ${
-        active ? 'block' : 'hidden'
+        active ? '' : 'hidden'
       }`}
     >
       <FaAngleDoubleUp />

@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import { useState, VFC } from 'react';
+import { useState, FC } from 'react';
 import { MdClose, MdMenu } from 'react-icons/md';
 import { headerNavLinks } from '@data/headerNavLinks';
 
-const MobileNav: VFC = () => {
+const MobileNav: FC = () => {
   const [open, setOpen] = useState<boolean>(false);
 
   const handleClick = () => {

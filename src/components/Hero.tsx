@@ -1,14 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { VFC } from 'react';
+import { FC } from 'react';
 
-const Hero: VFC = () => {
+const Hero: FC = () => {
   return (
     <section className='container py-8'>
       <div className='flex flex-col md:items-center lg:flex-row'>
-        <div className='text-center lg:pr-12 lg:w-7/12 lg:text-left'>
-          <h1 className='max-w-3xl text-3xl font-extrabold md:text-5xl'>むっくの包装資材ブログ</h1>
-          <p className='my-5 mx-auto max-w-lg text-sm font-medium text-gray-600 dark:text-white lg:my-8 lg:mx-0 lg:text-base'>
+        <div className='text-center lg:pr-8 lg:w-7/12 lg:text-left'>
+          <h1 className='text-4xl font-extrabold'>むっくの包装資材ブログ</h1>
+          <p className='my-5 text-sm font-medium text-gray-600 dark:text-white'>
             このサイトは包装資材営業マンのむっくが包装資材、梱包資材に関する情報を発信する個人ブログサイトです
           </p>
           <div className='flex flex-col justify-center items-center mt-8 sm:flex-row lg:justify-start'>
@@ -17,8 +17,8 @@ const Hero: VFC = () => {
             </Link>
           </div>
         </div>
-        <div className='flex flex-col justify-center mt-12 lg:mt-0'>
-          <div className='flex justify-center items-center max-w-3xl md:justify-end lg:max-w-none'>
+        <div className='flex flex-col justify-center mt-10 lg:mt-0'>
+          <div className='flex justify-center items-center md:justify-end'>
             <Image
               src='/images/TopPageImage.webp'
               alt='HeroImage'

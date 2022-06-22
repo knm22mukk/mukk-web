@@ -1,8 +1,8 @@
 import { useTheme } from 'next-themes';
-import { useEffect, useState, VFC } from 'react';
+import { useEffect, useState, FC } from 'react';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
 
-const ChangeThemeButton: VFC = () => {
+const ChangeThemeButton: FC = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState<boolean>(false);
 
