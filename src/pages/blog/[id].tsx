@@ -61,7 +61,7 @@ const BlogId: NextPage<Props> = ({ article }) => {
           dangerouslySetInnerHTML={{
             __html: `${article.body}`,
           }}
-          className='max-w-none prose dark:prose-invert article'
+          className='mx-auto max-w-4xl prose dark:prose-invert article'
         />
       </div>
       <div className='flex justify-center mb-8'>

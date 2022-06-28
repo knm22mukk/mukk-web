@@ -7,7 +7,9 @@ const Hero: FC = () => {
     <section className='container py-8'>
       <div className='flex flex-col md:items-center lg:flex-row'>
         <div className='text-center lg:pr-8 lg:w-7/12 lg:text-left'>
-          <h1 className='text-4xl font-extrabold'>むっくの包装資材ブログ</h1>
+          <h1 className='text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-cyan-500 to-indigo-500'>
+            むっくの包装資材ブログ
+          </h1>
           <p className='my-5 text-sm font-medium text-gray-600 dark:text-white'>
             このサイトは包装資材営業マンのむっくが包装資材、梱包資材に関する情報を発信する個人ブログサイトです
           </p>
