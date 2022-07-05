@@ -10,7 +10,7 @@ const about: NextPage = () => {
     <Layout>
       <SEO
         pageTitle='MUKK PACK || 自己紹介'
-        pageDescription='包装資材営業マンむっくの自己紹介ページ。簡単に自己紹介させていただきます。SNSのフォローもお願いします。'
+        pageDescription='包装資材営業マンむっくの自己紹介ページ。簡単に自己紹介します。SNSのフォローもお願いします。'
       />
       <BreadCrumb
         lists={[
@@ -23,7 +23,7 @@ const about: NextPage = () => {
       <SectionHeader
         subheading='ABOUT'
         title='包装資材営業マンむっくとは？'
-        description='簡単に自己紹介をさせていただきます'
+        description='簡単に自己紹介します'
       />
       <AboutMe />
     </Layout>

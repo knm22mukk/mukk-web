@@ -137,14 +137,16 @@ const Contact: NextPage = () => {
                   className='formInput'
                   rows={5}
                 ></textarea>
-                <input
-                  onClick={async (e) => {
-                    await handleSubmit(e);
-                  }}
-                  type='submit'
-                  value={buttonText}
-                  className='mt-10 cursor-pointer btn'
-                />
+                <div className='text-center'>
+                  <input
+                    onClick={async (e) => {
+                      await handleSubmit(e);
+                    }}
+                    type='submit'
+                    value={buttonText}
+                    className='mt-10 cursor-pointer btn'
+                  />
+                </div>
               </form>
             </div>
           </div>

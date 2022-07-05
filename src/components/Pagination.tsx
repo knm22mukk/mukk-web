@@ -43,7 +43,7 @@ const Pagination: FC<Props> = ({ maxPageNumber, currentPageNumber, totalCount, P
                 type='button'
                 aria-label='pagination button'
                 className={`flex justify-center items-center w-10 h-10 hover:bg-indigo-300 rounded-full transition-colors duration-150 ${
-                  currentPageNumber === number ? 'bg-indigo-400 text-white' : ''
+                  currentPageNumber === number && 'bg-indigo-400 text-white'
                 }`}
               >
                 {number}
@@ -59,7 +59,7 @@ const Pagination: FC<Props> = ({ maxPageNumber, currentPageNumber, totalCount, P
               type='button'
               aria-label='pagination button'
               className={`flex justify-center items-center w-10 h-10 hover:bg-indigo-300 rounded-full transition-colors duration-150 ${
-                currentPageNumber === maxPageNumber ? 'hidden' : ''
+                currentPageNumber === maxPageNumber && 'hidden'
               }`}
             >
               <FaAngleRight />
